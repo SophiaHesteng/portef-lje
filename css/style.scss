@@ -5,3 +5,74 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+header{
+    background-color: colors.$primaryBgColor;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 0.2em solid colors.$textColor;
+
+    h1{
+        color: colors.$textColor;
+        font-family: 'Fraunces', serif;
+        font-size: 2em;
+        padding: 2.6em;
+    }
+
+    nav{
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            padding: 5.8em;
+
+            li{
+                a{
+                    text-decoration: none;
+                    color: colors.$textColor;
+                    font: colors.$Font;
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
+
+.hero{
+    background-color: colors.$primaryBgColor;
+    width: 100%;
+    height: auto;
+
+    h2{
+        color: colors.$textColor;
+        font-family: 'Fraunces', serif;
+        font-size:3em;
+        padding-left: 2em;
+        padding-top: 1.5em;
+    }
+
+    .subheading{
+        font-size: 2em;
+        opacity: 70%;
+        padding-top:0.6em;
+    }
+
+    .quote{
+        font-style: italic;
+        margin-bottom: 1.5em;
+    }
+}
+
+p{
+    color: colors.$textColor;
+    font-family: colors.$Font;
+    font-size: 1.5em;
+    padding-left: 5em;
+    padding-top: 2em;
+}
+
+
+.btn{
+    @include components.btn;
+}

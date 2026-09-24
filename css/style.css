@@ -1,5 +1,75 @@
-/*---- Variabler ----*/
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+header {
+  background-color: #1D2B18;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.2em solid #f6f2e9;
+}
+header h1 {
+  color: #f6f2e9;
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+  padding: 2.6em;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 5.8em;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #f6f2e9;
+  font: "Inter", sans-serif;
+  font-size: 1.5em;
+}
+
+.hero {
+  background-color: #1D2B18;
+  width: 100%;
+  height: auto;
+}
+.hero h2 {
+  color: #f6f2e9;
+  font-family: "Fraunces", serif;
+  font-size: 3em;
+  padding-left: 2em;
+  padding-top: 1.5em;
+}
+.hero .subheading {
+  font-size: 2em;
+  opacity: 70%;
+  padding-top: 0.6em;
+}
+.hero .quote {
+  font-style: italic;
+  margin-bottom: 1.5em;
+}
+
+p {
+  color: #f6f2e9;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5em;
+  padding-left: 5em;
+  padding-top: 2em;
+}
+
+.btn {
+  background-color: #dce6d3;
+  padding: 0.8em;
+  border-radius: 1.5em;
+  text-decoration: none;
+  text-align: center;
+  color: #1D2B18;
+  margin-left: 5em;
+  margin-bottom: 2em;
+  font: "Inter", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
 }/*# sourceMappingURL=style.css.map */

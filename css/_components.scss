@@ -1,1 +1,16 @@
-@use 'components';
+@use 'colors';
+
+@mixin btn($bgColor:colors.$buttonColor, $btn-padding: 0.8em){
+    background-color: $bgColor;
+    padding: $btn-padding;
+    border-radius: 1.5em;
+    text-decoration: none;
+    text-align: center;
+    color: colors.$buttonTextColor;
+    margin-left: 5em;
+    margin-bottom: 2em;
+    font: colors.$Font;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
