@@ -17,20 +17,18 @@
 
 @mixin section1{
     width: 100%;
-    height: auto;
-    padding-bottom: 2em;
+    min-height: 10em;
+    padding-bottom: 4em;
     background-color: colors.$primaryBgColor;
-    border-bottom: 0.2em solid colors.$textColor;
     display: flex;
     flex-direction: row;
 }
 
 @mixin section2{
     width: 100%;
-    height: auto;
-    padding-bottom: 2em;
+    min-height: 10em;
+    padding-bottom: 4em;
     background-color: colors.$secondaryBgColor;
-    border-bottom: 0.2em solid colors.$textColor;
     display: flex;
     flex-direction: row;
 }
