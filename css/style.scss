@@ -18,7 +18,6 @@ header{
         font-family: colors.$Font;
         font-size: 2em;
         margin: auto;
-
     }
 
     nav{
@@ -42,6 +41,18 @@ header{
     }
 }
 
+p{
+    color: colors.$textColor;
+    font-family: colors.$Font;
+    font-size: 1.5em;
+    padding-top: 2em;
+}
+
+.btn{
+    @include components.btn;
+}
+
+/*---------------- Sektion 1 ----------------*/
 .section1{
     @include components.section1;
 }
@@ -94,16 +105,4 @@ header{
         font-size: 1.2em;
         padding-top: 0.5em;
     }
-}
-
-p{
-    color: colors.$textColor;
-    font-family: colors.$Font;
-    font-size: 1.5em;
-    padding-top: 2em;
-}
-
-
-.btn{
-    @include components.btn;
 }
