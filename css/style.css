@@ -46,9 +46,8 @@ p {
   text-decoration: none;
   text-align: center;
   color: #1D2B18;
-  margin-left: 4.5em;
-  margin-bottom: 2em;
-  font: "Fraunces", serif;
+  margin: 2em;
+  font-family: "Fraunces", serif;
   font-size: 1.2em;
   font-weight: bold;
   letter-spacing: 0.05em;
