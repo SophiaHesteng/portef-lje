@@ -27,7 +27,7 @@
 @mixin section2{
     width: 100%;
     min-height: 10em;
-    padding-bottom: 4em;
+    padding: 4em;
     background-color: colors.$secondaryBgColor;
     display: flex;
     flex-direction: row;

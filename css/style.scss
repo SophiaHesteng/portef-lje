@@ -45,7 +45,7 @@ p{
     color: colors.$textColor;
     font-family: colors.$Font;
     font-size: 1.5em;
-    padding-top: 2em;
+    margin-bottom: 2em;
 }
 
 .btn{
@@ -57,10 +57,16 @@ h3{
     color: colors.$textColor;
     font-family: colors.$Font;
     font-size: 3em;
-    padding-top: 1em;
-    margin-bottom: 1em;
+    padding: 0.5em 0;
 }
 
+h4{
+    color: colors.$textColor;
+    font-family: colors.$Font;
+    font-size: 2em;
+    padding-top: 1em;
+    letter-spacing: 0.1em;
+}
 /*---------------- Sektion 1 ----------------*/
 .section1{
     @include components.section1;
@@ -133,3 +139,42 @@ h3{
 }
 
 /*---------------- Sektion 3 ----------------*/
+
+#kompetencer{
+    display: flex;
+    flex-direction: column;
+
+    div{
+        padding-top: 2em;
+        text-align: center;
+    }
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .skills-box{
+        width: 30%;
+        padding: 1.5em;
+        margin-top: 2em;
+        background-color: colors.$secondaryBgColor;
+        border-radius: 4em;
+
+        .skills-list{ 
+            display: flex;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2em;
+        }
+    }
+
+    .tool-box{
+        width: 30%;
+        padding: 1.5em;
+        margin-top: 2em;
+        border-radius: 4em;
+    }
+}
