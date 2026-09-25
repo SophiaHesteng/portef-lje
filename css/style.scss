@@ -11,27 +11,30 @@ header{
     display: flex;
     justify-content: space-around;
     border-bottom: 0.2em solid colors.$textColor;
+    height: 8em;
 
     h1{
         color: colors.$textColor;
-        font-family: 'Fraunces', serif;
+        font-family: colors.$Font;
         font-size: 2em;
-        padding: 2.6em;
+        margin: auto;
+
     }
 
     nav{
+           margin: auto;
+
         ul{
             list-style: none;
             display: flex;
             justify-content: center;
             gap: 2em;
-            padding: 5.8em;
 
             li{
                 a{
                     text-decoration: none;
                     color: colors.$textColor;
-                    font: colors.$Font;
+                    font-family: colors.$Font;
                     font-size: 1.5em;
                 }
             }
@@ -39,28 +42,57 @@ header{
     }
 }
 
-.hero{
-    background-color: colors.$primaryBgColor;
-    width: 100%;
-    height: auto;
+.section1{
+    @include components.section1;
+}
+
+.text-box{
+    margin-left: 5em;
 
     h2{
-        color: colors.$textColor;
-        font-family: 'Fraunces', serif;
-        font-size:3em;
-        padding-left: 2em;
-        padding-top: 1.5em;
+    color: colors.$textColor;
+    font-family: colors.$Font;
+    font-size: 5em;
+    padding-top: 1em;
     }
 
     .subheading{
         font-size: 2em;
         opacity: 70%;
-        padding-top:0.6em;
+        padding-top: 0.5em;
     }
 
     .quote{
         font-style: italic;
         margin-bottom: 1.5em;
+        letter-spacing: 0.05em;
+    }
+}
+
+.image-box{
+    margin-left: 5em;
+    padding: 1.5em;
+    margin-top: 2em;
+    background-color: colors.$secondaryBgColor;
+    border-radius: 4em;
+
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 12em;
+        height: auto;
+        border-radius: 4em;
+    }
+
+    .subheading{
+        font-size: 2em;
+        padding: 0.5em;
+    }
+
+    p{
+        text-align: center;
+        font-size: 1.2em;
+        padding-top: 0.5em;
     }
 }
 
@@ -68,7 +100,6 @@ p{
     color: colors.$textColor;
     font-family: colors.$Font;
     font-size: 1.5em;
-    padding-left: 5em;
     padding-top: 2em;
 }
 

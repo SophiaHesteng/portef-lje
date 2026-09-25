@@ -8,54 +8,88 @@ header {
   display: flex;
   justify-content: space-around;
   border-bottom: 0.2em solid #f6f2e9;
+  height: 8em;
 }
 header h1 {
   color: #f6f2e9;
   font-family: "Fraunces", serif;
   font-size: 2em;
-  padding: 2.6em;
+  margin: auto;
+}
+header nav {
+  margin: auto;
 }
 header nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 2em;
-  padding: 5.8em;
 }
 header nav ul li a {
   text-decoration: none;
   color: #f6f2e9;
-  font: "Inter", sans-serif;
+  font-family: "Fraunces", serif;
   font-size: 1.5em;
 }
 
-.hero {
-  background-color: #1D2B18;
+.section1 {
   width: 100%;
   height: auto;
+  padding-bottom: 2em;
+  background-color: #1D2B18;
+  border-bottom: 0.2em solid #f6f2e9;
+  display: flex;
+  flex-direction: row;
 }
-.hero h2 {
+
+.text-box {
+  margin-left: 5em;
+}
+.text-box h2 {
   color: #f6f2e9;
   font-family: "Fraunces", serif;
-  font-size: 3em;
-  padding-left: 2em;
-  padding-top: 1.5em;
+  font-size: 5em;
+  padding-top: 1em;
 }
-.hero .subheading {
+.text-box .subheading {
   font-size: 2em;
   opacity: 70%;
-  padding-top: 0.6em;
+  padding-top: 0.5em;
 }
-.hero .quote {
+.text-box .quote {
   font-style: italic;
   margin-bottom: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+.image-box {
+  margin-left: 5em;
+  padding: 1.5em;
+  margin-top: 2em;
+  background-color: #374733;
+  border-radius: 4em;
+}
+.image-box img {
+  display: block;
+  margin: 0 auto;
+  width: 12em;
+  height: auto;
+  border-radius: 4em;
+}
+.image-box .subheading {
+  font-size: 2em;
+  padding: 0.5em;
+}
+.image-box p {
+  text-align: center;
+  font-size: 1.2em;
+  padding-top: 0.5em;
 }
 
 p {
   color: #f6f2e9;
-  font-family: "Inter", sans-serif;
+  font-family: "Fraunces", serif;
   font-size: 1.5em;
-  padding-left: 5em;
   padding-top: 2em;
 }
 
@@ -66,9 +100,9 @@ p {
   text-decoration: none;
   text-align: center;
   color: #1D2B18;
-  margin-left: 5em;
+  margin-left: 4.5em;
   margin-bottom: 2em;
-  font: "Inter", sans-serif;
+  font: "Fraunces", serif;
   font-size: 1.2em;
   font-weight: bold;
   letter-spacing: 0.05em;

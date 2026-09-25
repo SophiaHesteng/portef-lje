@@ -7,10 +7,30 @@
     text-decoration: none;
     text-align: center;
     color: colors.$buttonTextColor;
-    margin-left: 5em;
+    margin-left: 4.5em;
     margin-bottom: 2em;
     font: colors.$Font;
     font-size: 1.2em;
     font-weight: bold;
     letter-spacing: 0.05em;
+}
+
+@mixin section1{
+    width: 100%;
+    height: auto;
+    padding-bottom: 2em;
+    background-color: colors.$primaryBgColor;
+    border-bottom: 0.2em solid colors.$textColor;
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin section2{
+    width: 100%;
+    height: auto;
+    padding-bottom: 2em;
+    background-color: colors.$secondaryBgColor;
+    border-bottom: 0.2em solid colors.$textColor;
+    display: flex;
+    flex-direction: row;
 }
