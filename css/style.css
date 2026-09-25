@@ -54,6 +54,14 @@ p {
   letter-spacing: 0.05em;
 }
 
+h3 {
+  color: #f6f2e9;
+  font-family: "Fraunces", serif;
+  font-size: 3em;
+  padding-top: 1em;
+  margin-bottom: 1em;
+}
+
 /*---------------- Sektion 1 ----------------*/
 .section1 {
   width: 100%;
@@ -120,15 +128,10 @@ p {
 .section2 .text-box {
   min-width: 40%;
 }
-.section2 h3 {
-  color: #f6f2e9;
-  font-family: "Fraunces", serif;
-  font-size: 3em;
-  padding-top: 1em;
-  margin-bottom: 1em;
-}
 .section2 .description-box {
   margin: 2em;
   line-height: 2.4em;
   padding-right: 6em;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*---------------- Sektion 3 ----------------*//*# sourceMappingURL=style.css.map */

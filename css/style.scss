@@ -52,6 +52,15 @@ p{
     @include components.btn;
 }
 
+
+h3{
+    color: colors.$textColor;
+    font-family: colors.$Font;
+    font-size: 3em;
+    padding-top: 1em;
+    margin-bottom: 1em;
+}
+
 /*---------------- Sektion 1 ----------------*/
 .section1{
     @include components.section1;
@@ -116,17 +125,11 @@ p{
         min-width: 40%;
     }
 
-    h3{
-        color: colors.$textColor;
-        font-family: colors.$Font;
-        font-size: 3em;
-        padding-top: 1em;
-        margin-bottom: 1em;
-    }
-
     .description-box{
         margin: 2em;
         line-height: 2.4em;
         padding-right: 6em;
     }
 }
+
+/*---------------- Sektion 3 ----------------*/
