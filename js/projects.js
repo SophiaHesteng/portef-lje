@@ -9,6 +9,15 @@ export const projects = [
         link: {label: 'Se hjemmesiden', href: 'https://sanwol.dk/projekt3/'}
     },
     {
+        id: 'ung-helbred',
+        title: 'Ung Helbred',
+        type: 'Individuel, Webtilgængelighed',
+        role: 'Koncept, design og kode',
+        description: 'Udarbejde en hjemmeside der er tilgængelig for alle brugere, anvendelse af WCAG 2.2 retningslinjer og med fokus på Mental Sundhed og Velvære',
+        image: {src: 'img/happyfriends.jpg', alt: 'Gruppe af unge mennesker der hygger'},
+        link: {label: 'Se hjemmesiden', href: 'https://sophiahesteng.dk/unghelbred/'}
+    },
+    {
         id: 'den-groenne-kop',
         title: 'Den Grønne Kop',
         type: 'Individuel, Forgrenet Scenarie',
@@ -23,7 +32,7 @@ export const projects = [
         type: 'Gruppeprojekt, Branding fokuseret',
         role: 'Koncept, design og WordPress',
         description: 'Udarbejde en kampagne, der brander eget multimediebureau, gennem et visuelt brandingkoncept.',
-        image: {src: 'four-media.JPG', alt: 'Four Medias værdier'},
+        image: {src: 'img/four-media.JPG', alt: 'Four Medias værdier'},
         link: {label: 'Se hjemmesiden', href: 'https://fourmedia.dk/'}
     }
 ];

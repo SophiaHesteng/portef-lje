@@ -16,8 +16,8 @@
   display: block;
   width: 100%;
   aspect-ratio: 16/9;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .project-card h3 {
   margin: 0 0 0.5rem;
