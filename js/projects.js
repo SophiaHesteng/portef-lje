@@ -16,5 +16,14 @@ export const projects = [
         description: 'Interaktiv digital brugergrænseflade med et forgrenet scenarie med fokus på datasikkerhed',
         image: {src: 'img/logo.svg', alt: 'Logo til Den Grønne Kop'},
         link: {label: 'Prøv scenariet', href: 'https://sophiahesteng.dk/interaktiv/'}
+    },
+    {
+        id: 'four-media',
+        title: 'Four Media',
+        type: 'Gruppeprojekt, Branding fokuseret',
+        role: 'Koncept, design og WordPress',
+        description: 'Udarbejde en kampagne, der brander eget multimediebureau, gennem et visuelt brandingkoncept.',
+        image: {src: 'four-media.JPG', alt: 'Four Medias værdier'},
+        link: {label: 'Se hjemmesiden', href: 'https://fourmedia.dk/'}
     }
 ];

@@ -1,3 +1,81 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #1D2B18;
+  color: #f6f2e9;
+  font-family: "Fraunces", serif;
+}
+.project-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4em;
+}
+.project-card p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+.project-card a {
+  background-color: #dce6d3;
+  padding: 0.8em;
+  border-radius: 1.5em;
+  text-decoration: none;
+  text-align: center;
+  color: #1D2B18;
+  margin: 2em;
+  font-family: "Fraunces", serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin: 0;
+  font-size: 1em;
+}
+.project-card a:focus-visible {
+  outline: 3px solid #f6f2e9;
+  outline-offset: 3px;
+}
+
+.project-card__body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.project-card__details {
+  font-size: 0.9em;
+  opacity: 0.85;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Mobil */
+@media (max-width: 600px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -82,7 +160,7 @@ h4 {
 
 /*---------------- Sektion 1 ----------------*/
 .section1 {
-  width: 100%;
+  max-width: 100%;
   min-height: 10em;
   padding-bottom: 4em;
   background-color: #1D2B18;
@@ -187,4 +265,9 @@ h4 {
 .skills-container .tool-box {
   width: 30%;
   margin-top: 2em;
+}
+
+/*---------------- Sektion 4 ----------------*/
+#projekter {
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

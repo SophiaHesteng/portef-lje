@@ -1,0 +1,77 @@
+@use "colors";
+@use "components";
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    overflow: hidden;
+    border-radius: 1rem;
+    background: colors.$primaryBgColor;
+    color: colors.$textColor;
+    font-family: colors.$Font;
+
+    img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.4em;
+    }
+
+    p {
+        margin: 0 0 1rem;
+        line-height: 1.6;
+    }
+
+    a {
+        @include components.btn;
+        display: inline-block;
+        margin: 0;
+        font-size: 1em;
+
+        &:focus-visible {
+            outline: 3px solid colors.$textColor;
+            outline-offset: 3px;
+        }
+    }
+}
+
+.project-card__body {
+    padding: 1rem 1.25rem 1.25rem;
+}
+
+.project-card__details {
+    font-size: 0.9em;
+    opacity: 0.85;
+}
+
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
