@@ -3,11 +3,18 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   background-color: #1D2B18;
   display: flex;
   justify-content: space-around;
   height: 10em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 header h1 {
   color: #f6f2e9;
@@ -30,6 +37,11 @@ header nav ul li a {
   color: #f6f2e9;
   font-family: "Fraunces", serif;
   font-size: 1.5em;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+}
+header nav ul li a[aria-current=location] {
+  border-bottom-color: #f6f2e9;
 }
 
 p {
@@ -157,7 +169,6 @@ h4 {
 }
 .skills-container .skills-box {
   width: 30%;
-  height: 30em;
   padding: 1.5em;
   margin-top: 2em;
   background-color: #374733;
