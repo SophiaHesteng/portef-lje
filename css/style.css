@@ -157,21 +157,24 @@ h4 {
 }
 .skills-container .skills-box {
   width: 30%;
+  height: 30em;
   padding: 1.5em;
   margin-top: 2em;
   background-color: #374733;
   border-radius: 4em;
+}
+.skills-container .skills-box h4 {
+  padding-bottom: 2em;
 }
 .skills-container .skills-box .skills-list {
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2em;
+  gap: 1.2em;
 }
 .skills-container .tool-box {
   width: 30%;
   padding: 1.5em;
   margin-top: 2em;
-  border-radius: 4em;
 }/*# sourceMappingURL=style.css.map */
