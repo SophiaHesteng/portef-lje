@@ -9,6 +9,8 @@
 }
 
 .project-card {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     border-radius: 1rem;
     background: colors.$primaryBgColor;
@@ -17,6 +19,7 @@
 
     img {
         display: block;
+        flex-shrink: 0;
         width: 100%;
         aspect-ratio: 16 / 9;
         object-fit: contain;
@@ -35,7 +38,8 @@
     a {
         @include components.btn;
         display: inline-block;
-        margin: 0;
+        align-self: flex-start;
+        margin: auto 0 0;
         font-size: 1em;
 
         &:focus-visible {
@@ -46,20 +50,15 @@
 }
 
 .project-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding: 1rem 1.25rem 1.25rem;
 }
 
 .project-card__details {
     font-size: 0.9em;
     opacity: 0.85;
-}
-
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-top: 1.5rem;
 }
 
 /* Tablet */

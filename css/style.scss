@@ -102,9 +102,10 @@ h4{
     }
 
     .quote{
-        font-style: italic;
-        margin-bottom: 1.5em;
+        margin-top: 4em;
+        font-size: 2em;
         letter-spacing: 0.05em;
+        font-style: italic;
     }
 }
 
@@ -199,4 +200,97 @@ h4{
 
 #projekter {
     flex-direction: column;
+}
+
+/*---------------- Footer ----------------*/
+
+.footer {
+  padding: 4rem 1.5rem 1.5rem;
+
+  li{
+    color: colors.$textColor;
+  }
+
+  .quote{
+        font-size: 2em;
+        margin-bottom: 1.5em;
+        letter-spacing: 0.05em;
+
+    }
+
+  &__inner {
+    max-width: 70rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: start;
+
+    @media (min-width: 48rem) {
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  &__title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+
+  &__text {
+    max-width: 32rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &__contact {
+    font-style: normal;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.9rem;
+
+    &--inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+  }
+
+  a {
+    color: colors.$textColor;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.25s ease;
+
+    &:hover,
+    &:focus-visible {
+      background-size: 100% 1px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid;
+      outline-offset: 4px;
+    }
+  }
+
+  &__links {
+    max-width: 70rem;
+    margin: 2.5rem auto 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer a {
+    transition: none;
+  }
 }

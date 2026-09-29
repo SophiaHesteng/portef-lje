@@ -6,6 +6,8 @@
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border-radius: 1rem;
   background: #1D2B18;
@@ -14,6 +16,7 @@
 }
 .project-card img {
   display: block;
+  flex-shrink: 0;
   width: 100%;
   aspect-ratio: 16/9;
   -o-object-fit: contain;
@@ -29,18 +32,18 @@
 }
 .project-card a {
   background-color: #dce6d3;
-  padding: 0.8em;
+  padding: 1em;
   border-radius: 1.5em;
   text-decoration: none;
   text-align: center;
   color: #1D2B18;
-  margin: 2em;
   font-family: "Fraunces", serif;
   font-size: 1.2em;
-  font-weight: bold;
   letter-spacing: 0.05em;
+  margin-left: 2em;
   display: inline-block;
-  margin: 0;
+  align-self: flex-start;
+  margin: auto 0 0;
   font-size: 1em;
 }
 .project-card a:focus-visible {
@@ -49,19 +52,15 @@
 }
 
 .project-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 1rem 1.25rem 1.25rem;
 }
 
 .project-card__details {
   font-size: 0.9em;
   opacity: 0.85;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-top: 1.5rem;
 }
 
 /* Tablet */
@@ -131,16 +130,15 @@ p {
 
 .btn {
   background-color: #dce6d3;
-  padding: 0.8em;
+  padding: 1em;
   border-radius: 1.5em;
   text-decoration: none;
   text-align: center;
   color: #1D2B18;
-  margin: 2em;
   font-family: "Fraunces", serif;
   font-size: 1.2em;
-  font-weight: bold;
   letter-spacing: 0.05em;
+  margin-left: 2em;
 }
 
 h3 {
@@ -183,9 +181,10 @@ h4 {
   padding-top: 0.5em;
 }
 .text-box .quote {
-  font-style: italic;
-  margin-bottom: 1.5em;
+  margin-top: 4em;
+  font-size: 2em;
   letter-spacing: 0.05em;
+  font-style: italic;
 }
 
 .image-box {
@@ -270,4 +269,83 @@ h4 {
 /*---------------- Sektion 4 ----------------*/
 #projekter {
   flex-direction: column;
+}
+
+/*---------------- Footer ----------------*/
+.footer {
+  padding: 4rem 1.5rem 1.5rem;
+}
+.footer li {
+  color: #f6f2e9;
+}
+.footer .quote {
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.05em;
+}
+.footer__inner {
+  max-width: 70rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (min-width: 48rem) {
+  .footer__inner {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+  }
+}
+.footer__title {
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+.footer__text {
+  max-width: 32rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.footer__contact {
+  font-style: normal;
+}
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+.footer__list--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer a {
+  color: #f6f2e9;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s ease;
+}
+.footer a:hover, .footer a:focus-visible {
+  background-size: 100% 1px;
+}
+.footer a:focus-visible {
+  outline: 2px solid;
+  outline-offset: 4px;
+}
+.footer__links {
+  max-width: 70rem;
+  margin: 2.5rem auto 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer a {
+    transition: none;
+  }
 }/*# sourceMappingURL=style.css.map */
