@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -63,18 +64,6 @@
   opacity: 0.85;
 }
 
-/* Tablet */
-@media (max-width: 1000px) {
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-/* Mobil */
-@media (max-width: 600px) {
-  .projects {
-    grid-template-columns: 1fr;
-  }
-}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -184,7 +173,7 @@ h4 {
   margin-top: 4em;
   font-size: 1.5em;
   letter-spacing: 0.05em;
-  font-family: Fuzzy Bubbles;
+  font-family: "Fuzzy Bubbles";
 }
 
 .image-box {
@@ -272,6 +261,7 @@ h4 {
 }
 
 /*---------------- Footer ----------------*/
+/*---------------- Footer ----------------*/
 .footer {
   display: block;
   padding: 3rem 1.5rem;
@@ -281,17 +271,18 @@ h4 {
   max-width: 70rem;
   margin: 0 auto;
   display: grid;
-  gap: 2.5rem;
+  grid-template-columns: 1fr auto;
+  gap: 6rem;
   align-items: start;
 }
-.footer__inner__quote {
+.footer__quote {
   font-family: "Fuzzy Bubbles";
   font-size: 1.5rem;
   letter-spacing: 0.05em;
   text-align: center;
   margin: 0 0 1.5rem;
 }
-.footer__inner__list {
+.footer__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -299,29 +290,219 @@ h4 {
   gap: 0.9rem;
   font-size: 1.3rem;
 }
-.footer__inner__list--inline {
+.footer__list--inline {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
-.footer__inner__contact {
+.footer__contact {
   font-style: normal;
 }
-.footer__inner__contact a {
+.footer__contact a {
   background: linear-gradient(currentColor, currentColor) 0 100%/0 1px no-repeat;
   transition: background-size 0.25s ease;
 }
-.footer__inner__contact a:hover, .footer__inner__contact a:focus-visible {
+.footer__contact a:hover, .footer__contact a:focus-visible {
   background-size: 100% 1px;
 }
-.footer__inner nav a {
-  font-size: 50px;
+.footer__links a {
+  font-size: 3rem;
 }
-.footer__inner a {
+.footer a {
   color: inherit;
   text-decoration: none;
 }
-.footer__inner a:focus-visible {
+.footer a:focus-visible {
   outline: 2px solid;
   outline-offset: 4px;
+}
+
+/*==================== Lille desktop / tablet liggende ====================*/
+@media (max-width: 1024px) {
+  /* Hero */
+  .text-box {
+    margin-left: 3em;
+  }
+  .text-box h2 {
+    font-size: 4em;
+  }
+  .image-box {
+    margin-left: 3em;
+  }
+  /* Om mig + Projekter */
+  .section2 {
+    padding: 3em;
+  }
+  .section2 .description-box {
+    padding-right: 2em;
+  }
+  /* Projekt kortene */
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*==================== Tablet ====================*/
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    height: auto;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.25em 1em;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    text-align: center;
+  }
+  header nav {
+    margin: 0;
+  }
+  header nav ul {
+    flex-wrap: wrap;
+    gap: 0.5em 1.25em;
+  }
+  header nav ul li a {
+    font-size: 1.1em;
+  }
+  /* Generel tekst */
+  p {
+    font-size: 1.25em;
+    margin-bottom: 1.25em;
+  }
+  h3 {
+    font-size: 2.2em;
+  }
+  h4 {
+    font-size: 1.6em;
+  }
+  /* Knapper */
+  .btn {
+    display: inline-block;
+    margin: 0 1em 1em 0;
+  }
+  /* Hero */
+  .section1 {
+    flex-direction: column;
+  }
+  .section1 .text-box {
+    margin: 0 2em;
+  }
+  .text-box h2 {
+    font-size: 3em;
+    padding-top: 0.75em;
+  }
+  .text-box .subheading {
+    font-size: 1.4em;
+  }
+  .text-box .quote {
+    margin-top: 2em;
+    font-size: 1.25em;
+  }
+  .image-box {
+    margin: 1em 2em 0;
+    border-radius: 2em;
+  }
+  .image-box .subheading {
+    font-size: 1.5em;
+  }
+  /* Om mig + Projekter */
+  .section2 {
+    flex-direction: column;
+    padding: 2em;
+  }
+  .section2 .text-box {
+    min-width: 0;
+    margin-left: 0;
+  }
+  .section2 .description-box {
+    margin: 1em 0 0;
+    padding-right: 0;
+    line-height: 1.8;
+  }
+  /* Kompetencer */
+  #kompetencer {
+    padding: 0 1.25em 3em;
+  }
+  .skills-container {
+    flex-direction: column;
+  }
+  .skills-container .skills-box,
+  .skills-container .tool-box {
+    width: 100%;
+  }
+  .skills-container .skills-box {
+    border-radius: 2em;
+  }
+  /* Projekt kortene */
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  /* Footer */
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .footer__contact {
+    text-align: center;
+  }
+}
+/*==================== Mobil ====================*/
+@media (max-width: 425px) {
+  /* Header */
+  header h1 {
+    font-size: 1.2em;
+    letter-spacing: 0.15em;
+  }
+  header nav ul li a {
+    font-size: 1em;
+  }
+  /* Generel tekst */
+  p {
+    font-size: 1.1em;
+  }
+  h3 {
+    font-size: 1.8em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  /* Knapper */
+  .btn {
+    display: block;
+    margin: 0 0 1em;
+  }
+  /* Hero */
+  .section1 .text-box {
+    margin: 0 1.25em;
+  }
+  .text-box h2 {
+    font-size: 2.4em;
+  }
+  .text-box .subheading {
+    font-size: 1.2em;
+  }
+  .text-box .quote {
+    font-size: 1.1em;
+  }
+  .image-box {
+    margin: 1em 1.25em 0;
+    padding: 1em;
+  }
+  /* Om mig + Projekter */
+  .section2 {
+    padding: 1.25em;
+  }
+  /* Projekt kortene */
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+/*==================== Reduceret bevægelse ====================*/
+@media (prefers-reduced-motion: reduce) {
+  .footer__contact a {
+    transition: none;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,119 @@
+/*==================== Lille desktop / tablet liggende ====================*/
+@media (max-width: 1024px) {
+
+    /* Hero */
+    .text-box { margin-left: 3em; }
+    .text-box h2 { font-size: 4em; }
+    .image-box { margin-left: 3em; }
+
+    /* Om mig + Projekter */
+    .section2 { padding: 3em; }
+    .section2 .description-box { padding-right: 2em; }
+
+    /* Projekt kortene */
+    .projects { grid-template-columns: repeat(3, 1fr); }
+}
+
+/*==================== Tablet ====================*/
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        height: auto;
+        flex-direction: column;
+        gap: 1em;
+        padding: 1.25em 1em;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.5em;
+        letter-spacing: 0.2em;
+        text-align: center;
+    }
+    header nav { margin: 0; }
+    header nav ul {
+        flex-wrap: wrap;
+        gap: 0.5em 1.25em;
+    }
+    header nav ul li a { font-size: 1.1em; }
+
+    /* Generel tekst */
+    p { font-size: 1.25em; margin-bottom: 1.25em; }
+    h3 { font-size: 2.2em; }
+    h4 { font-size: 1.6em; }
+
+    /* Knapper */
+    .btn { display: inline-block; margin: 0 1em 1em 0; }
+
+    /* Hero */
+    .section1 { flex-direction: column; }
+    .section1 .text-box { margin: 0 2em; }
+    .text-box h2 { font-size: 3em; padding-top: 0.75em; }
+    .text-box .subheading { font-size: 1.4em; }
+    .text-box .quote { margin-top: 2em; font-size: 1.25em; }
+    .image-box { margin: 1em 2em 0; border-radius: 2em; }
+    .image-box .subheading { font-size: 1.5em; }
+
+    /* Om mig + Projekter */
+    .section2 { flex-direction: column; padding: 2em; }
+    .section2 .text-box { min-width: 0; margin-left: 0; }
+    .section2 .description-box {
+        margin: 1em 0 0;
+        padding-right: 0;
+        line-height: 1.8;
+    }
+
+    /* Kompetencer */
+    #kompetencer { padding: 0 1.25em 3em; }
+    .skills-container { flex-direction: column; }
+    .skills-container .skills-box,
+    .skills-container .tool-box { width: 100%; }
+    .skills-container .skills-box { border-radius: 2em; }
+
+    /* Projekt kortene */
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Footer */
+    .footer__inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .footer__contact { text-align: center; }
+}
+
+/*==================== Mobil ====================*/
+@media (max-width: 425px) {
+
+    /* Header */
+    header h1 { font-size: 1.2em; letter-spacing: 0.15em; }
+    header nav ul li a { font-size: 1em; }
+
+    /* Generel tekst */
+    p { font-size: 1.1em; }
+    h3 { font-size: 1.8em; }
+    h4 { font-size: 1.4em; }
+
+    /* Knapper */
+    .btn { display: block; margin: 0 0 1em; }
+
+    /* Hero */
+    .section1 .text-box { margin: 0 1.25em; }
+    .text-box h2 { font-size: 2.4em; }
+    .text-box .subheading { font-size: 1.2em; }
+    .text-box .quote { font-size: 1.1em; }
+    .image-box { margin: 1em 1.25em 0; padding: 1em; }
+
+    /* Om mig + Projekter */
+    .section2 { padding: 1.25em; }
+
+    /* Projekt kortene */
+    .projects { grid-template-columns: 1fr; }
+}
+
+/*==================== Reduceret bevægelse ====================*/
+@media (prefers-reduced-motion: reduce) {
+    .footer__contact a { transition: none; }
+}

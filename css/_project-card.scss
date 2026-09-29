@@ -60,17 +60,3 @@
     font-size: 0.9em;
     opacity: 0.85;
 }
-
-/* Tablet */
-@media (max-width: 1000px) {
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobil */
-@media (max-width: 600px) {
-    .projects {
-        grid-template-columns: 1fr;
-    }
-}
