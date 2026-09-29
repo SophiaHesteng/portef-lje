@@ -182,9 +182,9 @@ h4 {
 }
 .text-box .quote {
   margin-top: 4em;
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 0.05em;
-  font-style: italic;
+  font-family: fuzzy bubbles;
 }
 
 .image-box {
@@ -273,43 +273,29 @@ h4 {
 
 /*---------------- Footer ----------------*/
 .footer {
-  padding: 4rem 1.5rem 1.5rem;
-}
-.footer li {
+  display: block;
+  padding: 3rem 1.5rem;
   color: #f6f2e9;
-}
-.footer .quote {
-  font-size: 2em;
-  margin-bottom: 1.5em;
-  letter-spacing: 0.05em;
 }
 .footer__inner {
   max-width: 70rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
   gap: 2.5rem;
   align-items: start;
 }
 @media (min-width: 48rem) {
   .footer__inner {
-    grid-template-columns: 1.2fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr auto;
+    gap: 6rem;
   }
 }
-.footer__title {
-  font-family: "Fraunces", serif;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  line-height: 1.15;
-  margin: 0 0 1rem;
-}
-.footer__text {
-  max-width: 32rem;
-  line-height: 1.6;
-  margin: 0;
-}
-.footer__contact {
-  font-style: normal;
+.footer__quote {
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin: 0 0 1.5rem;
 }
 .footer__list {
   list-style: none;
@@ -317,31 +303,33 @@ h4 {
   padding: 0;
   display: grid;
   gap: 0.9rem;
+  font-size: 1.3rem;
 }
 .footer__list--inline {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 1rem;
 }
-.footer a {
-  color: #f6f2e9;
-  text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-size: 0% 1px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
+.footer__contact {
+  font-style: normal;
+}
+.footer__contact a {
+  background: linear-gradient(currentColor, currentColor) 0 100%/0 1px no-repeat;
   transition: background-size 0.25s ease;
 }
-.footer a:hover, .footer a:focus-visible {
+.footer__contact a:hover, .footer__contact a:focus-visible {
   background-size: 100% 1px;
+}
+.footer nav a {
+  font-size: 50px;
+}
+.footer a {
+  color: inherit;
+  text-decoration: none;
 }
 .footer a:focus-visible {
   outline: 2px solid;
   outline-offset: 4px;
-}
-.footer__links {
-  max-width: 70rem;
-  margin: 2.5rem auto 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
