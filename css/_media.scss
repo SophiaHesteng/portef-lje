@@ -116,4 +116,5 @@
 /*==================== Reduceret bevægelse ====================*/
 @media (prefers-reduced-motion: reduce) {
     .footer__contact a { transition: none; }
+    html { scroll-behavior: auto; }
 }

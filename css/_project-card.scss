@@ -1,13 +1,13 @@
 @use "colors";
 @use "components";
-
+ 
 .projects {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 1.5rem;
 }
-
+ 
 .project-card {
     display: flex;
     flex-direction: column;
@@ -16,46 +16,84 @@
     background: colors.$primaryBgColor;
     color: colors.$textColor;
     font-family: colors.$Font;
-
+ 
     img {
         display: block;
         flex-shrink: 0;
         width: 100%;
         aspect-ratio: 16 / 9;
-        object-fit: contain;
     }
-
-    h3 {
+ 
+    &__img--cover { object-fit: cover; }
+    &__img--contain { object-fit: contain; }
+ 
+    h4 {
         margin: 0 0 0.5rem;
+        padding-top: 0;
         font-size: 1.4em;
+        letter-spacing: normal;
     }
-
+ 
     p {
         margin: 0 0 1rem;
         line-height: 1.6;
     }
-
+ 
     a {
         @include components.btn;
         display: inline-block;
         align-self: flex-start;
         margin: auto 0 0;
         font-size: 1em;
-
+ 
+        &:hover { filter: brightness(0.92); }
+ 
         &:focus-visible {
             outline: 3px solid colors.$textColor;
             outline-offset: 3px;
         }
     }
+ 
+    &__toggle {
+        align-self: flex-start;
+        margin: 0 0 1rem;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: inherit;
+        font: inherit;
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+        cursor: pointer;
+ 
+        &:hover { text-decoration-thickness: 2px; }
+ 
+        &:focus-visible {
+            outline: 3px solid colors.$textColor;
+            outline-offset: 3px;
+        }
+    }
+ 
+    &__process {
+        margin: 0 0 1rem;
+ 
+        ol {
+            margin: 0;
+            padding-left: 1.25rem;
+            line-height: 1.6;
+        }
+ 
+        li + li { margin-top: 0.5rem; }
+    }
 }
-
+ 
 .project-card__body {
     display: flex;
     flex-direction: column;
     flex: 1;
     padding: 1rem 1.25rem 1.25rem;
 }
-
+ 
 .project-card__details {
     font-size: 0.9em;
     opacity: 0.85;

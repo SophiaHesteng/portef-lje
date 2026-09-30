@@ -1,45 +1,77 @@
-export class ProjectCard {
-    constructor(title, type, role, description, image, link){
-        this.title = title;
-        this.type = type;
-        this.role = role;
-        this.description = description;
-        this.image = image;
-        this.link = link;
+import { Component } from './component.js';
+
+export class ProjectCard extends Component {
+    #project;
+    #toggleButton;
+    #processPanel;
+ 
+    constructor(project) {
+        super();
+        this.#project = project;
     }
-
+ 
     render() {
-        const card = document.createElement('article');
-            card.className = 'project-card';
-
-        const img = document.createElement('img');
-            img.src = this.image.src;
-            img.alt = this.image.alt;
-            card.appendChild(img);
-
-        const cardBody = document.createElement('div');
-            cardBody.className = 'project-card__body';
-
-        const h3 = document.createElement('h3');
-            h3.textContent = this.title;
-            cardBody.appendChild(h3);
-
-        const details = document.createElement('p');
-            details.className = 'project-card__details';
-            details.textContent = `${this.type}. Min rolle: ${this.role}`;
-            cardBody.appendChild(details);
-
-        const description = document.createElement('p');
-            description.textContent = this.description;
-            cardBody.appendChild(description);
-
-        const a = document.createElement('a');
-            a.href = this.link.href;
-            a.textContent = this.link.label;
-            cardBody.appendChild(a);
-
-            card.appendChild(cardBody);
-
-            return card;
+        const { title, type, role, description, image, imageFit, link } = this.#project;
+ 
+        const card = this.createElement('article', { className: 'project-card' });
+ 
+        card.appendChild(this.createElement('img', {
+            className: `project-card__img project-card__img--${imageFit ?? 'cover'}`,
+            attributes: { src: image.src, alt: image.alt, loading: 'lazy' }
+        }));
+ 
+        const body = this.createElement('div', { className: 'project-card__body' });
+        body.appendChild(this.createElement('h4', { text: title }));
+        body.appendChild(this.createElement('p', {
+            className: 'project-card__details',
+            text: `${type}. Min rolle: ${role}`
+        }));
+        body.appendChild(this.createElement('p', { text: description }));
+ 
+        if (this.#project.process?.length) {
+            this.#renderProcess(body);
+        }
+ 
+        body.appendChild(this.createElement('a', {
+            text: link.label,
+            attributes: { href: link.href, 'aria-label': `${link.label}: ${title}` }
+        }));
+ 
+        card.appendChild(body);
+        return card;
+    }
+ 
+    #renderProcess(body) {
+        const panelId = `process-${this.#project.id}`;
+ 
+        this.#toggleButton = this.createElement('button', {
+            className: 'project-card__toggle',
+            text: 'Se min proces',
+            attributes: { type: 'button', 'aria-expanded': 'false', 'aria-controls': panelId }
+        });
+ 
+        this.#processPanel = this.createElement('div', {
+            className: 'project-card__process',
+            attributes: { id: panelId, hidden: '' }
+        });
+ 
+        const steps = this.createElement('ol');
+            this.#project.process.forEach(step => {
+                steps.appendChild(this.createElement('li', { text: step }));
+            });
+            
+        this.#processPanel.appendChild(steps);
+ 
+        this.#toggleButton.addEventListener('click', () => this.#toggleProcess());
+ 
+        body.appendChild(this.#toggleButton);
+        body.appendChild(this.#processPanel);
+    }
+ 
+    #toggleProcess() {
+        const wasOpen = this.#toggleButton.getAttribute('aria-expanded') === 'true';
+        this.#toggleButton.setAttribute('aria-expanded', String(!wasOpen));
+        this.#toggleButton.textContent = wasOpen ? 'Se min proces' : 'Skjul min proces';
+        this.#processPanel.hidden = wasOpen;
     }
 }
