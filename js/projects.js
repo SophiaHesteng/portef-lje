@@ -19,7 +19,7 @@ export const projects = [
         description: 'Udarbejde en hjemmeside der er tilgængelig for alle brugere, anvendelse af WCAG 2.2 retningslinjer og med fokus på Mental Sundhed og Velvære',
         image: {src: 'img/happyfriends.jpg', alt: 'Gruppe af unge mennesker der hygger'},
         process: [
-            'Målgruppen for dette projekt var unge.','Der var i dette projekte høj fokus på kontraster, tilgængelighed, læsbarhed og WCAG 2.2 retningslinjer.','Der blev lavet en 5 second test på 4 brugere, som med deres oplevelse af siderne, medbragte nogle ændringer til et bedre udtryk.'
+            'Målgruppen for dette projekt var unge.','Der var i dette projekt høj fokus på kontraster, tilgængelighed, læsbarhed og WCAG 2.2 retningslinjer.','Der blev lavet en 5 second test på 4 brugere, som med deres oplevelse af siderne, medbragte nogle ændringer til et bedre udtryk.'
             ],
         link: {label: 'Se hjemmesiden', href: 'https://sophiahesteng.dk/unghelbred/'}
     },
@@ -30,6 +30,7 @@ export const projects = [
         role: 'Koncept, design og kode',
         description: 'Interaktiv digital brugergrænseflade med et forgrenet scenarie med fokus på datasikkerhed',
         image: {src: 'img/logo.svg', alt: 'Logo til Den Grønne Kop'},
+        imageFit: 'contain',
         process: [
             'Jeg startede med at lave et flowchart i Figma, som blev udgangspunktet for dette forgrenede scenarie.','Al forarbejdet skete i Figma, dette gav et virkelig godt grundlag til kodningsprocessen.','Kodningen blev lettere ved at designet allerede var på plads og derfra var hele arbejdet at få det til at ligne og være funktionelt, som ønsket.'
             ],
@@ -48,3 +49,5 @@ export const projects = [
         link: {label: 'Se hjemmesiden', href: 'https://fourmedia.dk/'}
     }
 ];
+
+//Her er projekterne i et array of objects, så det er nemt at få overblik - samt tilføje nye projekter fremadrettet

@@ -1,4 +1,4 @@
-import { Component } from './component.js';
+import { Component } from './Component.js';
 import { ProjectCard } from './ProjectCard.js';
 
 export class ProjectList extends Component {
@@ -16,3 +16,6 @@ export class ProjectList extends Component {
         this.#container.replaceChildren(...cards);
     }
 }
+
+// ProjectList opretter et projektkort for hvert projekt i projects-arrayet
+// og indsætter alle kortene i den valgte container

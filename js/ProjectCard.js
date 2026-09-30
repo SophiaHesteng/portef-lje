@@ -1,4 +1,4 @@
-import { Component } from './component.js';
+import { Component } from './Component.js';
 
 export class ProjectCard extends Component {
     #project;
@@ -75,3 +75,7 @@ export class ProjectCard extends Component {
         this.#processPanel.hidden = wasOpen;
     }
 }
+
+// ProjectCard er en genanvendelig komponent, der omdanner projektdata fra projects-arrayet
+// til et projektkort med billede, information, link og en interaktiv sektion,
+// hvor brugeren kan folde projektets arbejdsproces ud

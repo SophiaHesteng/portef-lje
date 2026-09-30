@@ -1,5 +1,5 @@
 
-import { Component } from './component.js';
+import { Component } from './Component.js';
 import { Skill } from './Skill.js';
  
 export class SkillGroup extends Component {

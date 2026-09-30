@@ -1,9 +1,9 @@
-import { Component } from './component.js';
+import { Component } from './Component.js';
  
 // CV-data: ret stien, når du har lagt PDF'en i files/
 export const cv = {
     label: 'Download CV (PDF)',
-    href: 'files\Opdateret CV.pdf'
+    href: 'files/Opdateret_CV.pdf'
 };
 
 export class CvLink extends Component {

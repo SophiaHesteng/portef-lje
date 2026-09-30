@@ -58,3 +58,7 @@ export class ScrollSpy {
         }
     }
 }
+
+// ScrollSpy registrerer, hvilken sektion der er synlig,
+// og markerer den tilsvarende navigation, så brugeren altid kan se,
+// hvor på siden de befinder sig.
