@@ -21,12 +21,12 @@ export class ProjectCard extends Component {
         }));
  
         const body = this.createElement('div', { className: 'project-card__body' });
-        body.appendChild(this.createElement('h4', { text: title }));
-        body.appendChild(this.createElement('p', {
-            className: 'project-card__details',
-            text: `${type}. Min rolle: ${role}`
-        }));
-        body.appendChild(this.createElement('p', { text: description }));
+            body.appendChild(this.createElement('h4', { text: title }));
+            body.appendChild(this.createElement('p', {
+                className: 'project-card__details',
+                text: `${type}. Min rolle: ${role}`
+            }));
+            body.appendChild(this.createElement('p', { text: description }));
  
         if (this.#project.process?.length) {
             this.#renderProcess(body);
